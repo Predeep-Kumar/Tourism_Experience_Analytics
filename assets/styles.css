@@ -1,0 +1,281 @@
+/* ===== GLOBAL BACKGROUND ===== */
+[data-testid="stAppViewContainer"] {
+    background: radial-gradient(circle at 20% 20%, #000000, #1d2025 40%, #0f2027 100%);
+    background-attachment: fixed;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.block-container {
+    padding-top: 2rem;
+}
+
+/* ===== GLASS CARD ===== */
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.35),
+        inset 0 0 1px rgba(255,255,255,0.4);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 12px 45px rgba(0, 0, 0, 0.45),
+        inset 0 0 2px rgba(255,255,255,0.5);
+}
+
+/* ===== SIDEBAR GLASS ===== */
+section[data-testid="stSidebar"] {
+    background: rgba(255, 255, 255, 0.06) !important;
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Sidebar cards */
+.sidebar-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 18px;
+    padding: 18px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* ===== BUTTONS ===== */
+.stButton>button {
+    background: linear-gradient(145deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 0.6rem 1.5rem;
+    font-weight: 500;
+    color: white;
+    transition: all 0.25s ease;
+}
+
+.stButton>button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(145deg, rgba(255,255,255,0.25), rgba(255,255,255,0.08));
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+/* ===== SELECTBOX / INPUT ===== */
+.stSelectbox div[data-baseweb="select"] > div {
+    background: rgba(255,255,255,0.08);
+     -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+}
+
+.stSlider > div {
+    background: transparent;
+}
+
+/* ===== TABS ===== */
+.stTabs [role="tablist"] {
+    gap: 12px;
+}
+
+.stTabs [role="tab"] {
+    background: rgba(255,255,255,0.08);
+     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 8px 18px;
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: all 0.25s ease;
+}
+
+.stTabs [aria-selected="true"] {
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* ===== HEADERS ===== */
+h1, h2, h3, h4 {
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* ===== INFO BOX ===== */
+.stAlert {
+    background: rgba(255,255,255,0.1);
+     -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* ===== SCROLLBAR (Premium Feel) ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+}
+
+/* ===== METRIC STYLE ===== */
+[data-testid="stMetric"] {
+    background: rgba(255,255,255,0.08);
+    padding: 15px;
+    border-radius: 16px;
+     -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* ===== RADIO BUTTON ===== */
+.stRadio > div {
+    background: rgba(255,255,255,0.05);
+    padding: 10px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+
+/* =====================================================
+   CLEAN iOS GLASS TABS (Glass Only Active)
+   ===================================================== */
+
+/* Remove bottom border line completely */
+.stTabs [data-baseweb="tab-list"] {
+    border-bottom: none !important;
+}
+
+/* Remove red/blue underline indicator */
+.stTabs [role="tab"][aria-selected="true"]::after,
+.stTabs [role="tab"]::after {
+    display: none !important;
+}
+
+/* Center tabs */
+.stTabs [role="tablist"] {
+    justify-content: center !important;
+    gap: 20px;
+    border-bottom: none !important;
+}
+
+/* Default (inactive) tabs — clean & minimal */
+.stTabs [role="tab"] {
+    background: transparent !important;
+    border: none !important;
+    padding: 10px 24px;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+    color: rgba(255,255,255,0.75);
+}
+
+/* Hover effect (subtle) */
+.stTabs [role="tab"]:hover {
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Active tab — GLASS ONLY HERE */
+.stTabs [aria-selected="true"] {
+    background: rgba(255,255,255,0.18) !important;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.35) !important;
+    border-radius: 22px;
+    color: white !important;
+    box-shadow:
+        0 8px 28px rgba(0,0,0,0.35),
+        inset 0 0 2px rgba(255,255,255,0.5);
+    transform: translateY(-2px);
+}
+
+/* Smooth content transition */
+.stTabs > div > div {
+    animation: tabFade 0.35s ease-in-out;
+}
+
+@keyframes tabFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   REMOVE STREAMLIT TAB INDICATOR COMPLETELY
+   ========================================= */
+
+/* Remove bottom grey/blue line */
+.stTabs [data-baseweb="tab-border"],
+.stTabs [data-baseweb="tab-highlight"] {
+    display: none !important;
+}
+
+/* Remove animated red underline */
+.stTabs div[data-baseweb="tab-highlight"] {
+    display: none !important;
+}
+
+/* Remove any bottom border from tab list */
+.stTabs [role="tablist"] {
+    border-bottom: none !important;
+}
+
+/* Force remove pseudo underline */
+.stTabs [role="tab"]::after {
+    display: none !important;
+}
+
+/* =========================================
+   FIX TAB CROPPING (ADD SPACING + SAFE AREA)
+   ========================================= */
+
+/* Add spacing above and below tab container */
+.stTabs {
+    margin-top: 25px !important;
+    margin-bottom: 30px !important;
+}
+
+/* Add internal padding to tab list */
+.stTabs [role="tablist"] {
+    padding: 12px 0 !important;
+    align-items: center;
+}
+
+/* Increase tab padding */
+.stTabs [role="tab"] {
+    padding: 14px 30px !important;
+    min-height: 50px;
+}
+
+/* Prevent clipping from parent container */
+.stTabs > div {
+    overflow: visible !important;
+}
+
+/* Give breathing space for active lifted tab */
+.stTabs [aria-selected="true"] {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}

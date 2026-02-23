@@ -1,0 +1,7 @@
+{
+    "task": "classification",
+    "model_name": "XGBoost (Tuned)",
+    "model_path": "./models/xgboost_clf.pkl",
+    "metric": "Accuracy",
+    "score": 0.5192816635160681
+}

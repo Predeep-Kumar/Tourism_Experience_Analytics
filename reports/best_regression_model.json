@@ -1,0 +1,7 @@
+{
+    "task": "regression",
+    "model_name": "Gradient Boosting (Tuned)",
+    "model_path": "./models/gradient_boosting_regression.pkl",
+    "metric": "R2",
+    "score": 0.7453309385744564
+}

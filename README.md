@@ -139,7 +139,7 @@ pip install -r requirements.txt
 ### 4. Run the Application
 
 ```
-streamlit run aap.py
+streamlit run app.py
 ```
 
 ---

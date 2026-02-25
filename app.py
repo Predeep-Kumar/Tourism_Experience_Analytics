@@ -44,14 +44,18 @@ master_df = load_data()
 # =====================================================
 # SAFE LOAD MODEL
 # =====================================================
-
 def safe_load_model(path):
     try:
         if Path(path).exists():
             return joblib.load(path)
-    except Exception:
+        else:
+            print(f"File does not exist: {path}")
+            return None
+    except Exception as e:
+        import traceback
+        print(f"Error loading model: {path}")
+        print(traceback.format_exc())
         return None
-    return None
 
 # =====================================================
 # LOAD ALL MODELS
